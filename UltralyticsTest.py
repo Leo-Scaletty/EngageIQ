@@ -10,8 +10,8 @@ model = YOLO("yolo11n.pt")  # You can swap for yolo11s.pt if you want more accur
 cap = cv2.VideoCapture(0)
 
 # --- Define two exhibit zones (x1, y1, x2, y2) ---
-ZONE_1 = (100, 200, 400, 500)  # Left zone
-ZONE_2 = (500, 200, 800, 500)  # Right zone
+ZONE_1 = (200, 200, 600, 700)  # Left zone
+ZONE_2 = (900, 200, 1200, 700)  # Right zone
 
 # --- Tracking data structures ---
 people_data = {}           # {id: {"zone": int, "start": time.time()}}
@@ -133,3 +133,4 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
